@@ -15,7 +15,7 @@ scheduler.init_app(app)
 @scheduler.task("interval", id="hit_api", seconds=14)
 def hit_api():
     try:
-        res = requests.get("https://example.com/api/health", timeout=5)
+        res = requests.get("https://cartoonworldserver.onrender.com/renewurl", timeout=5)
         print("API hit:", res.status_code)
     except Exception as e:
         print("API error:", e)
